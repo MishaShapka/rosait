@@ -37,8 +37,8 @@ $.path.tasks.forEach(function(taskPath) {
 });
 
 $.gulp.task("default", 
-    $.gulp.series("clean", "iconfont", 
-    $.gulp.parallel("pug", "sass", "images", "favicons"),
+    $.gulp.series("clean", 
+    $.gulp.parallel("pug", "sass", "favicons"),
     $.gulp.parallel("transfer"),
     $.gulp.parallel("watch", "serve"),
 ));
